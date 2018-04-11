@@ -1,0 +1,9 @@
+﻿/*标记选中文本模态框的样式*/
+
+#labelTextModal {
+    overflow: auto;
+}
+
+#labelTextModal .modal-dialog{
+    width: 400px;
+}
