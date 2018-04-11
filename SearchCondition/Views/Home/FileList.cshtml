@@ -1,0 +1,20 @@
+﻿@*使用Vue生成文件列表区域*@
+<template v-for="fileInfo in files">
+    <div v-if="fileInfo.filetype === 'folder'" class="file folderBox menufolder"
+         v-bind:title="fileInfo.fileName" :data-filetype="fileInfo.filetype">
+        <div class="ico" v-bind:filetype="fileInfo.filetype">
+            <i v-bind:class="'x-item-file ' + fileInfo.class"></i>
+        </div>
+        <div class="filename">
+            <span class="title" title="tips">{{fileInfo.fileName}}</span>
+        </div>
+    </div>
+    <div v-else class="file fileBox menufile" v-bind:title="fileInfo.fileName" :data-filetype="fileInfo.filetype">
+        <div class="ico" v-bind:filetype="fileInfo.filetype">
+            <i v-bind:class="'x-item-file ' + fileInfo.class"></i>
+        </div>
+        <div class="filename">
+            <span class="title" title="tips">{{fileInfo.fileName}}</span>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,77 @@
+﻿@*首页*@
+
+@{
+    Layout = null;
+    ViewBag.Title = "FileExplorer";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fileexplorer-css")
+    <link href="~/fonts/web-fonts-with-css/css/fontawesome-all.css" type="text/css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/mock")
+    @Scripts.Render("~/bundles/vue")
+    @Scripts.Render("~/bundles/zTree")
+</head>
+<body>
+    <div class="row header">
+        <div class="headertitle">
+            <h2>标记非结构化数据原型</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 sp frame-left">
+            <div class="fileArea">
+                <div class="treeArea">
+                    @Html.Partial("FileAreaTree")
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 sp frame-right">
+            <div class="row fileBanner">
+                <div class="bannerContent"></div>
+            </div>
+            <div class="row fileContainer" oncontextmenu="javascript: window.event.returnValue=false;return false;">
+                <div id="fileList" class="fileList">
+                    @Html.Partial("FileList")
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    @Html.Partial("FileEditModal")
+
+    @*这是无用代码*@
+    @*<div class="row">
+        <div class="col-sm-12">
+            <div class="inner">
+                <h1>bootstrap布局</h1>
+                测试区域
+            </div>
+        </div>
+    </div>*@
+
+    @Scripts.Render("~/bundles/fileexplorer")
+
+    <script type="text/javascript">
+        $(window).bind("resize", function (event) {
+            if (this == event.target) {
+                $('.sp').removeAttr('style');
+            }
+        })
+
+    </script>
+
+    
+</body>
+
+</html>
+
+

@@ -1,0 +1,156 @@
+﻿/*整体界面框架布局（开始）*/
+.row {
+    margin-left:0;
+    margin-right:0;
+}
+
+.row.header {
+    height: 70px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.row .sp {
+    height:800px;
+    margin-bottom:10px;
+    padding: 0;
+}
+
+.frame-left {
+    border-right: 3px #eee solid;
+}
+
+.fileArea {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding-left: 15px;
+}
+
+.fileArea .treeArea {
+    border-top: 3px #eee solid;
+    padding-right: 15px;
+}
+
+.frame-right .fileBanner {
+    height: 50px;
+    padding-right: 15px;
+}
+
+.bannerContent {
+    height: 100%;
+    width: 100%;
+    border-top: 3px #eee solid;
+    background: #f8f8f8 url("/Images/clouddrive/common/bg.gif") 0px -2px repeat-x;
+}
+
+.frame-right .fileContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding-right: 15px;
+}
+
+.fileList {
+    height: 100%;
+    width: 100%;
+    border-top: 3px #eee solid;
+    padding: 10px 0 0 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .row .sp {
+        width: 80%;
+    }
+
+    .row .frame-left {
+        width: 20%;
+    }
+
+}
+
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute; font-size: 0.1px; z-index: 99999; display:block;}
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0px; height: 100%;}
+
+/*整体界面框架布局（结束）*/
+
+/*文件夹布局（开始）*/
+div.fileList div.file {
+    max-height: 130px;
+}
+
+.fileList .file {
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    height: auto;
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border:1px solid transparent;
+    overflow: hidden;
+}
+
+.fileList .file .ico {
+    padding-top: 4px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.fileList .file .ico {
+    padding-left: 5px;
+    height: 70px;
+    width: 70px;
+}
+
+.fileList .file .filename {
+    cursor: text;
+    text-align: center;
+    word-break: break-all;
+    font-size:1em;
+    margin: 2px auto;
+    line-height: 1em;
+    padding-bottom: 5px;
+}
+
+.fileList .file .filename {
+    width: 80px;
+}
+
+.fileList .file .ico .x-item-file {
+    margin-top: 4px;
+} 
+    
+.x-item-file {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/Images/clouddrive/file_icon/icon_file/file.png');
+    width: 100%;
+    height: 100%;
+    display:inline-block;
+    pointer-events: none;
+}
+
+.x-folder {
+    background-image: url('/Images/clouddrive/file_icon/icon_others/folder.png');
+}
+
+.x-txt {
+    background-image: url('/Images/clouddrive/file_icon/icon_file/txt.png');
+}
+
+.x-pdf {
+    background-image: url('/Images/clouddrive/file_icon/icon_file/pdf.png');
+}
+
+.x-docx {
+    background-image: url('/Images/clouddrive/file_icon/icon_file/docx.png');
+}
+
+/*文件夹布局（结束）*/
