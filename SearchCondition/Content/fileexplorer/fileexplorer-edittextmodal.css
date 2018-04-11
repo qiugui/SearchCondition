@@ -1,8 +1,12 @@
 ﻿/*文本编辑模态框的样式*/
 
 /*文本编辑框整体布局（开始）*/
+#editTextModal {
+    overflow: auto;
+}
+
 @media screen and (min-width: 1200px){
-    .modal-dialog{
+    #editTextModal .modal-dialog{
         width: 900px;
     }
 }
@@ -40,40 +44,54 @@ div.fileEdit div.fileContentArea {
     border-right: 3px #eee solid;
     overflow-x: hidden;
     overflow-y: auto;
+    padding: 5px;
 }
 
 
 div.fileEdit div.labelArea {
     /*border-left: 3px #eee solid;*/
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
 /*文本编辑框整体布局（结束）*/
 
 /*文本编辑框右侧打标签布局（开始）*/
 div.fileEdit .labelArea .autoLabel{
     width:100%;
-    height:70%;
+    height:60%;
+    position: relative;
 }
 
 div.fileEdit .labelArea .manualLabel {
     width: 100%;
-    height: 30%;
+    height: 40%;
+    position: relative;
     border-top: #eee solid 1px;
 }
 
 .labelArea .autoLabel .autoLabel-title,
 .labelArea .manualLabel .manualLabel-title {
     position: relative;
-    /* left: 50%; */
+    left: 50%;
     width: 90px;
-    margin-left: auto;
-    margin-right: auto
+    margin-left: -45px;
+    z-index: 9999;
+}
+
+.autoLabel-title h5,.manualLabel-title h5{
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .labelArea .autoLabel .autoLabel-content,
 .labelArea .manualLabel .manualLabel-content {
-    padding: 5px;
+    position: absolute;
+    width: 100%;
+    top: 35px;
+    bottom: 0px;
+    padding: 0px 5px 5px 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .autoLabel .autoLabel-content .labelGroup,
@@ -85,7 +103,7 @@ div.fileEdit .labelArea .manualLabel {
     height: auto;
     margin-top: 10px;
     margin-right: 10px;
-    border: 1px solid /*transparent*/;
+    border: 1px solid transparent;
     overflow: hidden;
 }
 /*文本编辑框右侧打标签布局（开始）*/

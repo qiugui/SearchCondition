@@ -47,6 +47,7 @@
     </div>
 
     @Html.Partial("FileEditModal")
+    @Html.Partial("FileLabelTextModal")
 
     @*这是无用代码*@
     @*<div class="row">
@@ -67,6 +68,10 @@
             }
         })
 
+        $(document).ready(function () {
+            $('.dropdown.bootstrapMenu').attr('oncontextmenu', 'javascript: window.event.returnValue=false;return false;');
+        })
+        
     </script>
 
     

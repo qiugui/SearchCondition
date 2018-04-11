@@ -164,6 +164,7 @@
     <Content Include="Content\fileexplorer\fileexplorer-common.css" />
     <Content Include="Content\fileexplorer\fileexplorer-edittextmodal.css" />
     <Content Include="Content\fileexplorer\fileexplorer-filecontainer.css" />
+    <Content Include="Content\fileexplorer\fileexplorer-labeltextmodal.css" />
     <Content Include="Content\jquery-ui\jquery-ui.css" />
     <Content Include="Content\jquery-ui\jquery-ui.min.css" />
     <Content Include="Content\jquery-ui\jquery-ui.structure.css" />
@@ -558,6 +559,7 @@
     <Content Include="Views\Home\FileEditModal.cshtml" />
     <Content Include="Views\Home\FileList.cshtml" />
     <Content Include="Views\Home\FileAreaTree.cshtml" />
+    <Content Include="Views\Home\FileLabelTextModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

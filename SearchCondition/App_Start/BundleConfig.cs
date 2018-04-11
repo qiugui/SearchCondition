@@ -44,7 +44,9 @@ namespace SearchCondition
                       "~/Content/bootstrap/bootstrap.css",
                       "~/Content/bootstrap/bootstrap-theme.css",
                       "~/Content/jquery-ui/jquery-ui.css",
-                      "~/Content/zTree/zTreeStyle/zTreeStyle.css",
+                      //"~/Content/zTree/zTreeStyle/zTreeStyle.css",
+                      "~/Content/zTree/metroStyle/metroStyle.css",
+                      //"~/Content/zTree/awesomeStyle/awesome.css",
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/fileexplorer-css").Include(
