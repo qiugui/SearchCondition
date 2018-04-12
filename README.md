@@ -1,2 +1,2 @@
 # SearchCondition
-A web prototype demo
+A web prototype demo for labeling NoSQL data
