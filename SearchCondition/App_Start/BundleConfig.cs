@@ -38,7 +38,8 @@ namespace SearchCondition
                       "~/Scripts/fileexplorer/fileexplorer-common.js",
                       "~/Scripts/fileexplorer/fileexplorer-mock.js",
                       "~/Scripts/fileexplorer/fileexplorer-rightMenu.js",
-                      "~/Scripts/fileexplorer/fileexplorer-fileAreaTree.js"));
+                      "~/Scripts/fileexplorer/fileexplorer-fileAreaTree.js",
+                      "~/Scripts/fileexplorer/fileexplorer-modalevent.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap/bootstrap.css",
@@ -52,6 +53,7 @@ namespace SearchCondition
             bundles.Add(new StyleBundle("~/Content/fileexplorer-css").Include(
                       "~/Content/fileexplorer/fileexplorer-common.css",
                       "~/Content/fileexplorer/fileexplorer-filecontainer.css",
+                      "~/Content/fileexplorer/fileexplorer-labeltextmodal.css",
                       "~/Content/fileexplorer/fileexplorer-edittextmodal.css"));
         }
     }

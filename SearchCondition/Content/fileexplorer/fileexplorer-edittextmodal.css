@@ -32,12 +32,12 @@
 }
 
 .modal .area.fileContentArea {
-    width: 40%;
+    width: 60%;
     background-color: lightgray;
 }
 
 .modal .area.labelArea {
-    width: 60%;
+    width: 40%;
 }
 
 div.fileEdit div.fileContentArea {

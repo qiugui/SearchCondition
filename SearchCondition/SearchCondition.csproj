@@ -504,12 +504,14 @@
     <Content Include="fonts\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\zTree\awesomeStyle\awesome.less" />
     <Content Include="Content\zTree\awesomeStyle\fa.less" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\npm.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-common.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-mock.js" />
+    <Content Include="Scripts\fileexplorer\fileexplorer-modalevent.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-rightMenu.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -94,5 +94,6 @@ function labelTextFunc(content) {
     var txtContent = selObject.toString();
     $('#labelTextModalLabel').html("请选择标签分类");
     $('#label-value').html(txtContent);
-    $('#labelTextModal').modal('show');
+    var $modal = $('#labelTextModal');
+    $modal.modal('show');
 }

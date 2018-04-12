@@ -1,7 +1,7 @@
 ﻿/*标记选中文本模态框的样式*/
 
 #labelTextModal {
-    overflow: auto;
+    overflow: hidden;
 }
 
 #labelTextModal .modal-dialog{

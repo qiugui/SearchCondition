@@ -22,25 +22,101 @@ Mock.mock('getFile.json', function (options) {
                 }
             }
         ]
-    })
+    });
     return fileData;
 })
 
 //使用Mock获取文件区域树数据
 Mock.mock('getFileArea.json', function (options) {
-    var fileData = Mock.mock({
+    var fileAreaData = Mock.mock({
         'array': [
             {
-                name: 'test1', open: true, id: 1, children: [
-                    { name: 'test1_1', id: 2, pId: 1 }, { name: 'test1_2', id: 3, pId: 1 }
+                name: '私人区', open: true, id: 1, children: [
+                    { name: '管理员私人区', id: 2, pId: 1 }, { name: '其他', id: 3, pId: 1 }
                 ]
             },
             {
-                name: 'test2', open: true, id: 3, children: [
-                    { name: 'test2_1', id: 4, pId: 3 }, { name: 'test2_2', id: 5, pId: 3 }
+                name: '共享管理', open: true, id: 3, children: [
+                    { name: '我的共享', id: 4, pId: 3 }, { name: '他人共享', id: 5, pId: 3 }
                 ]
             }
         ]
-    })
-    return fileData;
+    });
+    return fileAreaData;
+})
+
+Mock.mock('getContentTag.json', function (options) {
+    var contentTagData = Mock.mock({
+        'array': [
+            {
+                'tagName': '内容涉及国家',
+                'tagcategorycode': '0103',
+                'tagtypecode': '',
+                'id': 1
+            },
+            {
+                'tagName': '内容涉及人员',
+                'tagcategorycode': '0103',
+                'tagtypecode': '',
+                'id': 2
+            },
+            {
+                'tagName': '内容涉及领域',
+                'tagcategorycode': '0103',
+                'tagtypecode': '',
+                'id': 3
+            }
+        ]
+    });
+    return contentTagData;
+})
+
+Mock.mock('getSubjectTag.json', function (options) {
+    var subjectTagData = Mock.mock({
+        'array': [{
+            'tagtypename': '涉华言论',
+            'tagtypecode': '010301',
+            'id': 1,
+            'tagcategorycode': '0103',
+            'tags': [{
+                'tagName': '主权分裂',
+                'tagcategorycode': '0103',
+                'tagtypecode': '010301',
+                'id':4
+            }, {
+                'tagName': '反动言论',
+                'tagcategorycode': '0103',
+                'tagtypecode': '010301',
+                'id': 5
+            }, {
+                'tagName': '心战反宣',
+                'tagcategorycode': '0103',
+                'tagtypecode': '010301',
+                'id': 6
+            }]
+        },
+        {
+            'tagtypename': '资讯领域',
+            'tagtypecode': '010302',
+            'id': 2,
+            'tagcategorycode': '0103',
+            'tags': [{
+                'tagName': '主权分裂',
+                'tagcategorycode': '0103',
+                'tagtypecode': '010302',
+                'id': 7
+            }, {
+                'tagName': '反动言论',
+                'tagcategorycode': '0103',
+                'tagtypecode': '010302',
+                'id': 8
+            }, {
+                'tagName': '心战反宣',
+                'tagcategorycode': '0103',
+                'tagtypecode': '010302',
+                'id': 9
+            }]
+        }]
+    });
+    return subjectTagData;
 })
