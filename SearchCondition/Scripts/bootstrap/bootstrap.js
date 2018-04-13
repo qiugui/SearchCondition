@@ -1163,12 +1163,6 @@ if (typeof jQuery === 'undefined') {
       paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
       paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
     })
-
-    var $modal_dialog = $(this.$element[0]).find('.modal-dialog')
-    if ($modal_dialog.hasClass('verticle-align')) {
-        var m_top = ($(window).height() - $modal_dialog.height()) / 3
-        $modal_dialog.css({ 'top': m_top + 'px' })
-    }
   }
 
   Modal.prototype.resetAdjustments = function () {

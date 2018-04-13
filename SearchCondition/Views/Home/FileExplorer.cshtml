@@ -69,6 +69,7 @@
         })
 
         $(document).ready(function () {
+            //右键菜单上禁止浏览器原生右键功能
             $('.dropdown.bootstrapMenu').attr('oncontextmenu', 'javascript: window.event.returnValue=false;return false;');
         })
         

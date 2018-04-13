@@ -1,13 +1,22 @@
 ﻿@*标记选中文本的模态框*@
 <div class="modal" id="labelTextModal" tabindex="-1" role="dialog" aria-labelledby="labelTextModalLabel" oncontextmenu="javascript: window.event.returnValue=false;return false;">
     <div class="modal-dialog verticle-align" role="document">
-        <div class="modal-content">
+        <div class="modal-content" id="labelTextArea">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="labelTextModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="labelTextModalLabel">{{labelAreaTitle}}</h4>
             </div>
             <div class="modal-body">
-                <p id="label-value"></p>
+                <p id="label-value" v-if="labelAreaType === 0">{{labelData.labelValue}}</p>
+                @*对“选择文本”进行打标签时的界面*@
+                <div id="labelAreaType0" v-if="labelAreaType === 0">
+
+                </div>
+
+                @*对文档主题进行打标签时的界面*@
+                <div id="labelAreaType1" v-if="labelAreaType === 1">
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>

@@ -158,6 +158,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Content\bootstrap-select\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
@@ -504,8 +506,12 @@
     <Content Include="fonts\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\zTree\awesomeStyle\awesome.less" />
     <Content Include="Content\zTree\awesomeStyle\fa.less" />
+    <Content Include="Content\bootstrap-select\bootstrap-select.css.map" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\bootstrap-select\bootstrap-select.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap-select\bootstrap-select.min.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\npm.js" />
@@ -513,6 +519,8 @@
     <Content Include="Scripts\fileexplorer\fileexplorer-mock.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-modalevent.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-rightMenu.js" />
+    <Content Include="Scripts\fileexplorer\fileexplorer-tooloper.js" />
+    <Content Include="Scripts\fileexplorer\fileexplorer-vuedata.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

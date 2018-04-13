@@ -83,11 +83,17 @@ div.fileEdit .labelArea .manualLabel {
     padding-bottom: 10px;
 }
 
+.autoLabel .autoLabel-tool,
+.manualLabel .manualLabel-tool{
+    height: 22px;
+}
+
+
 .labelArea .autoLabel .autoLabel-content,
 .labelArea .manualLabel .manualLabel-content {
     position: absolute;
     width: 100%;
-    top: 35px;
+    top: 57px;
     bottom: 0px;
     padding: 0px 5px 5px 5px;
     overflow-x: hidden;

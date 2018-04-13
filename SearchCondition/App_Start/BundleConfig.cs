@@ -23,6 +23,7 @@ namespace SearchCondition
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap/bootstrap.js",
                       "~/Scripts/bootstrap-menu/BootstrapMenu.js",
+                      "~/Scripts/bootstrap-select/bootstrap-select.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/mock").Include(
@@ -36,14 +37,17 @@ namespace SearchCondition
 
             bundles.Add(new ScriptBundle("~/bundles/fileexplorer").Include(
                       "~/Scripts/fileexplorer/fileexplorer-common.js",
+                      "~/Scripts/fileexplorer/fileexplorer-vuedata.js",
                       "~/Scripts/fileexplorer/fileexplorer-mock.js",
                       "~/Scripts/fileexplorer/fileexplorer-rightMenu.js",
                       "~/Scripts/fileexplorer/fileexplorer-fileAreaTree.js",
-                      "~/Scripts/fileexplorer/fileexplorer-modalevent.js"));
+                      "~/Scripts/fileexplorer/fileexplorer-modalevent.js",
+                      "~/Scripts/fileexplorer/fileexplorer-tooloper.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap/bootstrap.css",
-                      "~/Content/bootstrap/bootstrap-theme.css",
+                      //"~/Content/bootstrap/bootstrap-theme.css",
+                      "~/Content/bootstrap-select/bootstrap-select.css",
                       "~/Content/jquery-ui/jquery-ui.css",
                       //"~/Content/zTree/zTreeStyle/zTreeStyle.css",
                       "~/Content/zTree/metroStyle/metroStyle.css",

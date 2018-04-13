@@ -4,7 +4,7 @@
  */
 
 //右键菜单
-var menu = new BootstrapMenu('.fileList .file', {
+var menu_on_file = new BootstrapMenu('.fileList .file', {
     fetchElementData: function ($file) {
         var fileType = $file.data('filetype');
         var fileName = $file.attr('title');
@@ -51,7 +51,7 @@ function openText2Label(file) {
     $('#editTextModal').modal('show');
 }
 
-var menu = new BootstrapMenu('.fileEdit .fileContentArea', {
+var menu_on_text = new BootstrapMenu('.fileEdit .fileContentArea', {
     fetchElementData: function ($content) {
         return $content;
     },
@@ -90,10 +90,16 @@ var menu = new BootstrapMenu('.fileEdit .fileContentArea', {
 })
 
 function labelTextFunc(content) {
+
     var selObject = window.getSelection();
     var txtContent = selObject.toString();
-    $('#labelTextModalLabel').html("请选择标签分类");
-    $('#label-value').html(txtContent);
+
+    ve_labelTextArea.labelAreaType = 0;
+    ve_labelTextArea.labelAreaTitle = "对选择文本进行打标";
+    ve_labelTextArea.labelData.labelValue = txtContent;
+
+
+
     var $modal = $('#labelTextModal');
     $modal.modal('show');
 }

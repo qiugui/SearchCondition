@@ -21,15 +21,7 @@ var setting = {
 
 var zNodes;
 
-//定义前台展示文件列表绑定的Vue
-var ve = new Vue({
-    el: '#fileList',
-    data: {
-        files: null
-    }
-});
-
-//获取文件区域树数据
+//获取文件区域树数据，并初始化树形菜单且默认点击第一级子菜单
 $.ajax({
     url: 'getFileArea.json',
     type: 'get',
@@ -43,6 +35,7 @@ $.ajax({
     }
 })
 
+//绑定菜单点击事件，在文件列表区域显示文件
 function showFile(e, treeId, treeNode) {
     if (treeNode.isParent) {
         if (treeNode.open === true) {
@@ -56,7 +49,7 @@ function showFile(e, treeId, treeNode) {
         return;
     }
 
-    //mock获取文件数据
+    //mock获取文件列表数据，并使用Vue进行界面渲染
     $.ajax({
         url: 'getFile.json',
         dataType: 'json',
@@ -66,7 +59,7 @@ function showFile(e, treeId, treeNode) {
         }
     }).done(function (data, status, jqXHR) {
         var fileInfos = data.array;
-        ve.files = fileInfos;
+        ve_fileList.files = fileInfos;
     })
 
 }
