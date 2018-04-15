@@ -158,6 +158,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-fileinput\fileinput-rtl.css" />
+    <Content Include="Content\bootstrap-fileinput\fileinput-rtl.min.css" />
+    <Content Include="Content\bootstrap-fileinput\fileinput.css" />
+    <Content Include="Content\bootstrap-fileinput\fileinput.min.css" />
     <Content Include="Content\bootstrap-select\bootstrap-select.css" />
     <Content Include="Content\bootstrap-select\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
@@ -455,6 +459,56 @@
     <Content Include="Images\jquery-ui\ui-icons_777777_256x240.png" />
     <Content Include="Images\jquery-ui\ui-icons_cc0000_256x240.png" />
     <Content Include="Images\jquery-ui\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\img\loading-sm.gif" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Scripts\bootstrap-fileinput\fileinput.js" />
+    <Content Include="Scripts\bootstrap-fileinput\fileinput.min.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\ar.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\az.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\bg.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\ca.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\cr.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\cs.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\da.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\de.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\el.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\es.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\et.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\fa.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\fi.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\fr.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\gl.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\hu.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\id.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\it.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\ja.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\ka.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\kr.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\kz.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\LANG.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\lt.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\nl.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\no.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\pl.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\pt-BR.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\pt.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\ro.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\ru.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\sk.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\sl.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\sv.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\th.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\tr.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\uk.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\vi.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\zh-TW.js" />
+    <Content Include="Scripts\bootstrap-fileinput\locales\zh.js" />
+    <Content Include="Scripts\bootstrap-fileinput\plugins\piexif.js" />
+    <Content Include="Scripts\bootstrap-fileinput\plugins\piexif.min.js" />
+    <Content Include="Scripts\bootstrap-fileinput\plugins\purify.js" />
+    <Content Include="Scripts\bootstrap-fileinput\plugins\purify.min.js" />
+    <Content Include="Scripts\bootstrap-fileinput\plugins\sortable.js" />
+    <Content Include="Scripts\bootstrap-fileinput\plugins\sortable.min.js" />
     <Content Include="Scripts\bootstrap-menu\BootstrapMenu.js" />
     <Content Include="Scripts\bootstrap-menu\BootstrapMenu.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -516,6 +570,7 @@
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\npm.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-common.js" />
+    <Content Include="Scripts\fileexplorer\fileexplorer-fileinput.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-mock.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-modalevent.js" />
     <Content Include="Scripts\fileexplorer\fileexplorer-rightMenu.js" />
@@ -570,6 +625,7 @@
     <Content Include="Views\Home\FileList.cshtml" />
     <Content Include="Views\Home\FileAreaTree.cshtml" />
     <Content Include="Views\Home\FileLabelTextModal.cshtml" />
+    <Content Include="Views\Home\FileInputModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

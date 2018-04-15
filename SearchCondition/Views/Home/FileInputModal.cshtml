@@ -1,0 +1,18 @@
+﻿@*标记选中文本的模态框*@
+<div class="modal fade" id="fileInputModal" tabindex="-1" role="dialog" aria-labelledby="fileInputModalLabel" oncontextmenu="javascript: window.event.returnValue=false;return false;">
+    <div class="modal-dialog verticle-align" role="document">
+        <div class="modal-content" id="labelTextArea">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="fileInputModalLabel">请选择文件</h4>
+            </div>
+            <div class="modal-body">
+                <div id="fileInput-div">
+                    <input type="file" id="file-Portrait" class="file-loading" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

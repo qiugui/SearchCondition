@@ -20,6 +20,20 @@ var ve_labelTextArea = new Vue({
         labelData: {
             labelInfo: [],
             labelValue: ''
+        },
+        tagValueIsHidden: true
+    },
+    computed: {
+        tagValueObject: function () {
+            return this.tagValueIsHidden ? 'tagValue_select_div taghidden' : 'tagValue_select_div';
         }
+    }
+});
+
+var ve_labeledResult = new Vue({
+    el: '#labeledResult',
+    data: {
+        autoLableData: [],
+        manualLabelData:[]
     }
 });

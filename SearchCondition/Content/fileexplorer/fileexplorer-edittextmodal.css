@@ -112,4 +112,8 @@ div.fileEdit .labelArea .manualLabel {
     border: 1px solid transparent;
     overflow: hidden;
 }
+
+.autoLabel .autoLabel-tool, .manualLabel .manualLabel-tool {
+    padding-left: 5px;
+}
 /*文本编辑框右侧打标签布局（开始）*/

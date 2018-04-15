@@ -96,10 +96,31 @@ function labelTextFunc(content) {
 
     ve_labelTextArea.labelAreaType = 0;
     ve_labelTextArea.labelAreaTitle = "对选择文本进行打标";
+    ve_labelTextArea.tagValueIsHidden = true;
     ve_labelTextArea.labelData.labelValue = txtContent;
 
+    $.ajax({
+        url: 'getContentTag.json',
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+            var allTagInfo = data.array;
+            ve_labelTextArea.labelData.labelInfo = allTagInfo;
 
+            var allTagInfo = data.array;
+            ve_labelTextArea.labelData.labelInfo = allTagInfo;
 
-    var $modal = $('#labelTextModal');
-    $modal.modal('show');
+            var option_str = '';
+            $.each(allTagInfo, function (index, value) {
+                var currentOpt = '<option value="' + value.id + '">' + value.tagName + '</option>';
+                option_str += currentOpt;
+            });
+
+            $('#tagType_select').html(option_str);
+            $('#tagType_select').selectpicker('refresh');
+
+            var $modal = $('#labelTextModal');
+            $modal.modal('show');
+        }
+    })
 }

@@ -24,6 +24,8 @@ namespace SearchCondition
                       "~/Scripts/bootstrap/bootstrap.js",
                       "~/Scripts/bootstrap-menu/BootstrapMenu.js",
                       "~/Scripts/bootstrap-select/bootstrap-select.js",
+                      "~/Scripts/bootstrap-fileinput/fileinput.js",
+                      "~/Scripts/bootstrap-fileinput/locales/zh.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/mock").Include(
@@ -37,6 +39,7 @@ namespace SearchCondition
 
             bundles.Add(new ScriptBundle("~/bundles/fileexplorer").Include(
                       "~/Scripts/fileexplorer/fileexplorer-common.js",
+                      "~/Scripts/fileexplorer/fileexplorer-fileinput.js",
                       "~/Scripts/fileexplorer/fileexplorer-vuedata.js",
                       "~/Scripts/fileexplorer/fileexplorer-mock.js",
                       "~/Scripts/fileexplorer/fileexplorer-rightMenu.js",
@@ -46,12 +49,10 @@ namespace SearchCondition
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap/bootstrap.css",
-                      //"~/Content/bootstrap/bootstrap-theme.css",
                       "~/Content/bootstrap-select/bootstrap-select.css",
+                      "~/Content/bootstrap-fileinput/fileinput.css",
                       "~/Content/jquery-ui/jquery-ui.css",
-                      //"~/Content/zTree/zTreeStyle/zTreeStyle.css",
                       "~/Content/zTree/metroStyle/metroStyle.css",
-                      //"~/Content/zTree/awesomeStyle/awesome.css",
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/fileexplorer-css").Include(

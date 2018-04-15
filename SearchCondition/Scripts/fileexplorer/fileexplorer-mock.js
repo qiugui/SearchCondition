@@ -101,17 +101,17 @@ Mock.mock('getSubjectTag.json', function (options) {
             'id': 2,
             'tagcategorycode': '0103',
             'tags': [{
-                'tagName': '主权分裂',
+                'tagName': '政治',
                 'tagcategorycode': '0103',
                 'tagtypecode': '010302',
                 'id': 7
             }, {
-                'tagName': '反动言论',
+                'tagName': '经济',
                 'tagcategorycode': '0103',
                 'tagtypecode': '010302',
                 'id': 8
             }, {
-                'tagName': '心战反宣',
+                'tagName': '文化',
                 'tagcategorycode': '0103',
                 'tagtypecode': '010302',
                 'id': 9
@@ -119,4 +119,36 @@ Mock.mock('getSubjectTag.json', function (options) {
         }]
     });
     return subjectTagData;
+})
+
+Mock.mock('getLabeledResult.json', function (options) {
+    var labeledResult = Mock.mock({
+        'object': {
+            'autoLableData': [
+                {
+                    'key': '内容涉及国家',
+                    'value': '中国',
+                    'id': 1
+                },
+                {
+                    'key': '内容涉及人员',
+                    'value': '张三',
+                    'id': 2
+                }
+            ],
+            'manualLabelData': [
+                {
+                    'key': '资讯领域',
+                    'value': '政治',
+                    'id': 3
+                }
+            ]
+        }
+    });
+    return labeledResult;
+})
+
+Mock.mock('/mock/fileinput', function (options) {
+    var labeledResult = Mock.mock({});
+    return labeledResult;
 })

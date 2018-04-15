@@ -36,7 +36,7 @@
                         </p>
                     </div>
 
-                    <div class="area labelArea">
+                    <div class="area labelArea" id="labeledResult">
                         <div class="autoLabel">
                             <div class="autoLabel-title"><h5>文档内容标记</h5></div>
                             <div class="autoLabel-tool">
@@ -52,63 +52,21 @@
                                 </div>
                             </div>
                             <div class="autoLabel-content">
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
+                                <template v-for="label in autoLableData">
+                                    <div class="labelGroup">
+                                        <span class="label-key">{{label.key}}</span>
+                                        &#58;
+                                        <span class="label-value">{{label.value}}</span>
+                                        <span class="label-id" style="display: none;">{{label.id}}</span>
+                                    </div>
+                                </template>
                             </div>
                         </div>
                         <div class="manualLabel">
                             <div class="manualLabel-title"><h5>文档主题标记</h5></div>
                             <div class="manualLabel-tool">
                                 <div class="btn-group btn-group-xs" role="group">
-                                    <button type="button" class="btn btn-default" onclick="addSubjectLabel">
+                                    <button type="button" class="btn btn-default" onclick="addSubjectLabel()">
                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                         增加
                                     </button>
@@ -119,56 +77,14 @@
                                 </div>
                             </div>
                             <div class="manualLabel-content">
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
-                                <div class="labelGroup">
-                                    <span class="label-key">标签key</span>
-                                    &#58;
-                                    <span class="label-value">标签value</span>
-                                </div>
+                                <template v-for="label in manualLabelData">
+                                    <div class="labelGroup">
+                                        <span class="label-key">{{label.key}}</span>
+                                        &#58;
+                                        <span class="label-value">{{label.value}}</span>
+                                        <span class="label-id" style="display: none;">{{label.id}}</span>
+                                    </div>
+                                </template>
                             </div>
                         </div>
                     </div>

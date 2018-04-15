@@ -36,7 +36,20 @@
         </div>
         <div class="col-sm-9 sp frame-right">
             <div class="row fileBanner">
-                <div class="bannerContent"></div>
+                <div class="bannerContent">
+                    <div class="bannerContent-tool">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fileInputModal">
+                                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                上传文件
+                            </button>
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                                
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row fileContainer" oncontextmenu="javascript: window.event.returnValue=false;return false;">
                 <div id="fileList" class="fileList">
@@ -48,6 +61,7 @@
 
     @Html.Partial("FileEditModal")
     @Html.Partial("FileLabelTextModal")
+    @Html.Partial("FileInputModal")
 
     @*这是无用代码*@
     @*<div class="row">

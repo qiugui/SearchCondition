@@ -4,6 +4,24 @@
  */
 
 //在模态框show被立即调用的时候触发
+$('#editTextModal').on('show.bs.modal', function (e) {
+    initLabeledResult();
+})
+
+//初始化该文本的标签结果
+function initLabeledResult() {
+    $.ajax({
+        url: 'getLabeledResult.json',
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+            ve_labeledResult.autoLableData = data.object.autoLableData;
+            ve_labeledResult.manualLabelData = data.object.manualLabelData;
+        }
+    })
+}
+
+//在模态框show被立即调用的时候触发
 $('#labelTextModal').on('show.bs.modal', function (e) {
     $(this).draggable({
         cursor: 'move',
@@ -18,14 +36,54 @@ $('#labelTextModal').on('show.bs.modal', function (e) {
     }
 })
 
+
 //在模态框被隐藏之后触发
 $('#labelTextModal').on('hidden.bs.modal', function (e) {
     $(this).removeAttr('style');
     //清除view的数据
     ve_labelTextArea.labelAreaType = 0;
     ve_labelTextArea.labelAreaTitle = 'Modal title';
+    ve_labelTextArea.tagValueIsHidden = true;
     ve_labelTextArea.labelData.labelInfo = [];
     ve_labelTextArea.labelData.labelValue = '';
 })
 
+function saveTagResult() {
+    if (ve_labelTextArea.labelAreaType === 0) {
+        var tagTypeId = $('#tagType_select').val();
+        var tagValue = ve_labelTextArea.labelData.labelValue;
 
+        var tagType;
+        $.each(ve_labelTextArea.labelData.labelInfo, function (i, v) {
+            if (v.id == tagTypeId) tagType = v;
+        })
+       
+        ve_labeledResult.autoLableData.push({ 'key': tagType.tagName, 'value': tagValue });
+
+    } else if (ve_labelTextArea.labelAreaType === 1) {
+        var tagTypeId = $('#tagType_select').val();
+        var tagValueId = $('#tagValue_select').val();
+
+        var tagType, tagValue;
+        $.each(ve_labelTextArea.labelData.labelInfo, function (i, v) {
+            if (v.id == tagTypeId) {
+                tagType = v;
+                $.each(tagType.tags, function (j, w) {
+                    if (w.id == tagValueId)
+                        tagValue = w;
+                })
+            }
+        })
+
+        ve_labeledResult.manualLabelData.push({ 'key': tagType.tagtypename, 'value': tagValue.tagName });
+    }
+    
+    var $modal = $('#labelTextModal');
+    $modal.modal('hide');
+}
+
+//在模态框show被立即调用的时候触发
+$('#fileInputModal').on('show.bs.modal', function (e) {
+    $('#fileInput-div').html('<input type="file" id="file-Portrait" class="file" />');
+    initFileInput("file-Portrait");
+})
