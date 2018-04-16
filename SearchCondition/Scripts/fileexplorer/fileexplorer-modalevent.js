@@ -3,6 +3,11 @@
  *
  */
 
+/**
+ * 模拟新增数据的id
+ */
+var temp_labelId = 9;
+
 //在模态框show被立即调用的时候触发
 $('#editTextModal').on('show.bs.modal', function (e) {
     initLabeledResult();
@@ -57,8 +62,9 @@ function saveTagResult() {
         $.each(ve_labelTextArea.labelData.labelInfo, function (i, v) {
             if (v.id == tagTypeId) tagType = v;
         })
-       
-        ve_labeledResult.autoLableData.push({ 'key': tagType.tagName, 'value': tagValue });
+
+        temp_labelId += 1
+        ve_labeledResult.autoLableData.push({ 'key': tagType.tagName, 'value': tagValue, 'id': temp_labelId });
 
     } else if (ve_labelTextArea.labelAreaType === 1) {
         var tagTypeId = $('#tagType_select').val();
@@ -75,7 +81,8 @@ function saveTagResult() {
             }
         })
 
-        ve_labeledResult.manualLabelData.push({ 'key': tagType.tagtypename, 'value': tagValue.tagName });
+        temp_labelId += 1;
+        ve_labeledResult.manualLabelData.push({ 'key': tagType.tagtypename, 'value': tagValue.tagName, 'id': temp_labelId });
     }
     
     var $modal = $('#labelTextModal');

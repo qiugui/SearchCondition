@@ -61,3 +61,50 @@ function addSubjectLabel() {
         }
     })
 }
+
+//删除界面标签
+function removeLabel(labelType) {
+    if (labelType === 'auto') {
+        ve_labeledResult.tool.autoremovehidden = false;
+    }
+
+    if (labelType === 'manual') {
+        ve_labeledResult.tool.manualremovehidden = false;
+    }
+}
+
+//取消界面标签的删除功能
+function cancelRemove(labelType) {
+    if (labelType === 'auto') {
+        ve_labeledResult.tool.autoremovehidden = true;
+        ve_labeledResult.removeAutoLabelIds = [];
+    }
+
+    if (labelType === 'manual') {
+        ve_labeledResult.tool.manualremovehidden = true;
+        ve_labeledResult.removeManualLabelIds = [];
+    }
+}
+
+//确认删除选中的界面标签
+function confirmRemove(labelType) {
+    if (labelType === 'auto') {
+        ve_labeledResult.tool.autoremovehidden = true;
+        $.each(ve_labeledResult.removeAutoLabelIds, function (index, item) {
+            $.each(ve_labeledResult.autoLableData, function (index_, item_) {
+                if (item_.id == item) ve_labeledResult.autoLableData.splice(index_, 1)
+            })
+        })
+        ve_labeledResult.removeAutoLabelIds = [];
+    }
+
+    if (labelType === 'manual') {
+        ve_labeledResult.tool.manualremovehidden = true;
+        $.each(ve_labeledResult.removeManualLabelIds, function (index, item) {
+            $.each(ve_labeledResult.manualLabelData, function (index_, item_) {
+                if (item_.id == item) ve_labeledResult.manualLabelData.splice(index_, 1)
+            })
+        })
+        ve_labeledResult.removeManualLabelIds = [];
+    }
+}

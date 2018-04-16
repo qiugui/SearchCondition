@@ -45,19 +45,31 @@
                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                         增加
                                     </button>*@
-                                    <button type="button" class="btn btn-default">
+                                    <button type="button" class="btn btn-default" onclick="removeLabel('auto')">
                                         <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                         删除
+                                    </button>
+                                </div>
+                                <div class="btn-group btn-group-xs remove-group" v-bind:class="{removehidden: tool.autoremovehidden}" role="group">
+                                    <button type="button" class="btn btn-default" onclick="confirmRemove('auto')">
+                                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        确认
+                                    </button>
+                                    <button type="button" class="btn btn-default" onclick="cancelRemove('auto')">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        取消
                                     </button>
                                 </div>
                             </div>
                             <div class="autoLabel-content">
                                 <template v-for="label in autoLableData">
                                     <div class="labelGroup">
+                                        <span class="labelgroup-addon" v-bind:class="{removehidden: tool.autoremovehidden}">
+                                            <input type="checkbox" :value="label.id" v-model="removeAutoLabelIds"/>
+                                        </span>
                                         <span class="label-key">{{label.key}}</span>
                                         &#58;
                                         <span class="label-value">{{label.value}}</span>
-                                        <span class="label-id" style="display: none;">{{label.id}}</span>
                                     </div>
                                 </template>
                             </div>
@@ -70,19 +82,32 @@
                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                         增加
                                     </button>
-                                    <button type="button" class="btn btn-default">
+                                    <button type="button" class="btn btn-default" onclick="removeLabel('manual')">
                                         <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                         删除
                                     </button>
                                 </div>
+                                <div class="btn-group btn-group-xs remove-group" v-bind:class="{removehidden: tool.manualremovehidden}" role="group">
+                                    <button type="button" class="btn btn-default" onclick="confirmRemove('manual')">
+                                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        确认
+                                    </button>
+                                    <button type="button" class="btn btn-default" onclick="cancelRemove('manual')">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        取消
+                                    </button>
+                                </div>
                             </div>
+                            
                             <div class="manualLabel-content">
                                 <template v-for="label in manualLabelData">
                                     <div class="labelGroup">
+                                        <span class="labelgroup-addon" v-bind:class="{removehidden: tool.manualremovehidden}">
+                                            <input type="checkbox" :value="label.id" v-model="removeManualLabelIds"/>
+                                        </span>
                                         <span class="label-key">{{label.key}}</span>
                                         &#58;
                                         <span class="label-value">{{label.value}}</span>
-                                        <span class="label-id" style="display: none;">{{label.id}}</span>
                                     </div>
                                 </template>
                             </div>

@@ -7,7 +7,7 @@
 var ve_fileList = new Vue({
     el: '#fileList',
     data: {
-        files: null
+        files: []
     }
 });
 
@@ -30,10 +30,18 @@ var ve_labelTextArea = new Vue({
     }
 });
 
+//某个文档打标签的情况
 var ve_labeledResult = new Vue({
     el: '#labeledResult',
     data: {
+        isNewFile: true,
         autoLableData: [],
-        manualLabelData:[]
+        manualLabelData: [],
+        tool: {
+            autoremovehidden: true,
+            manualremovehidden: true
+        },
+        removeAutoLabelIds: [],
+        removeManualLabelIds: []
     }
 });

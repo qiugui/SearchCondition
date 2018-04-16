@@ -31,5 +31,6 @@ namespace SearchCondition.Controllers
         {
             return View();
         }
+
     }
 }
